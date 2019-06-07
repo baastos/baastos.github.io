@@ -1,0 +1,410 @@
+body{
+
+ font-family: 'Open Sans', sans-serif;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;  
+}
+a{
+    text-decoration: none; 
+    color: black;
+}
+abbr{
+    text-decoration: none !important;
+        
+}
+
+.header-content{
+    width: 100%;
+    background-color:#212529;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+/*.header-div1{
+flex:.2 1 auto;
+display: flex;    
+}*/
+
+.nav__links{
+    display: flex;
+    margin-right: 40px;
+    
+}
+.nav__links li{
+    list-style: none;
+    padding:0;
+    margin:0 5px;
+    
+    
+}
+.nav__links a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+.nav-links-active{
+opacity: .25;
+transition: .5s opacity ease-in;
+}
+.header__btn{
+   
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #3E3E3E;
+    color: white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12.8px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    display: none; 
+    
+}
+.header__btn:hover{
+    background-color: #0062cc;
+    
+}
+
+.menu-icon{
+ 
+ margin-right: 3px;    
+}
+
+.middle-content-container{
+
+    
+background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("../imgs/foto-bg.jpg");
+background-repeat: no-repeat;
+background-position: center top;
+background-size: cover;    
+height:600px;
+color: white;
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+width:100%;
+   
+}
+
+.middle__imgVictor{
+border-radius: 50%;
+max-height: 280px;
+margin-top:70px;
+}
+.container-text{
+margin-top: -30px;
+}
+.middle__title{
+    font-size: 64px;
+    
+}
+.hr-class{
+   margin-top: .5rem;
+   margin-bottom: 1rem;
+   background-color: white;
+   height: 4px;
+   border: 0;
+   width: 250px;
+   z-index: 10;
+   box-sizing: border-box;
+   
+}
+.middle__text{
+    font-size: 28px;
+}
+.about-me-container{
+    
+    padding: 50px 70px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+.black__line{
+
+   background-color: black;
+   margin-bottom: 2.5em;
+   
+}
+.about-me__title{
+    font-size:52px;
+    text-align: center;
+}
+.about-me__text{
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    
+}
+.linkedin-button{
+    display: block;
+    text-align: center;
+    border: 2px solid #3b3b3b;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    padding: 15 25px;
+    font-weight: normal;
+    max-width: 100px;
+    font-size: 19px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .5s background-color ease;
+    
+    
+   
+}
+.linkedin-button:hover{
+    background-color:#3b3b3b;
+    color: white;
+}
+
+
+
+.certif-content{
+    background-color: #525252;
+    color: white;
+    padding: 50px 70px;
+    box-sizing: border-box;
+
+}
+
+.certif__title{
+    text-align: center;
+    font-size: 48px;
+}
+.cards__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;  
+}
+.certif__cards{
+    text-align: center;
+    margin: 30px 0;
+    
+   
+}
+.certificado{
+    max-width: 250px;
+    transition: .25s opacity ease;
+    
+}
+.certif-icon {
+    position: relative;
+    
+}
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    color: white;
+    opacity: 0;
+    transition: .25s opacity ease;
+    pointer-events: none;
+    
+}
+.myModal{
+    position: fixed;
+    display: none;
+    z-index: 10;
+    padding-top: 100px;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    
+}
+.modal-content{
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;    
+}
+.caption{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    height: 150px;
+}
+.closeImg{
+    position: absolute;
+    top: 50px;
+    right: 260px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3;
+}
+.closeImg:hover,.close:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* add animation - zoom in the modal */
+.modal-content,.caption{
+ animation-name: zoom;
+ animation-duration: 1s;
+}
+@keyframes zoom{
+    from{
+        transform:scale(0)
+    }
+    to{
+        transform:scale(1)
+    }
+}
+a:hover .icon{
+   opacity: 1;
+    
+    
+}
+a:hover .certificado{
+    opacity: .25;
+
+}
+
+
+.contact-content{
+    padding: 30px 70px;
+    text-align: center;
+    height: 250px;
+    
+}
+.contact__title{
+    font-size: 46px;
+}
+.contact-content ul{
+    display: flex;
+    justify-content: center;
+    padding-left: 2px;
+    
+       
+}
+.contact-content ul li{
+    list-style: none;
+    align-items: center;
+    padding: 0px 15px;
+    
+    
+}
+.circle-icon{
+ border: 2px solid black;
+ border-radius: 50%;
+ padding: 15px; 
+ font-size: 18px;
+ min-width: 20px;
+ transition: .5s background ease;
+ 
+    
+    
+}
+.circle-icon:hover{
+   background: #3b3b3b;
+   color: white;
+}
+footer{
+padding:12px;
+background: black;
+color: white;
+text-align: center;
+font-size: 14px;
+font-weight: normal;
+text-shadow: 2px 2px 4px #000000;
+}
+@media screen and (max-width:1180px){
+    .cards__container{
+        grid-template-columns: repeat(2,1fr);
+  
+    }
+}
+@media screen and (max-width:992px){
+.header-content{
+    justify-content: flex-start;
+        
+    }
+.nav__links{
+  position: absolute;
+  left:0px;
+  top: 44px;
+  height: 210px;
+  width: 100%;
+  transform: translateY(-150%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+.nav-active{
+transform: translateY(0%);
+transition: transform .5s ease-in;
+background-color: #212529;
+
+}
+.nav-links-active{
+opacity:.25;
+transition: .5s opacity ease-in;
+}
+      
+    
+.header__btn{
+    display: flex;
+    padding: 22px;
+    align-items: center;
+    border-radius: 8px;
+}    
+.middle-content-container{
+    height: 550px;
+}
+.middle__title{
+    font-size: 48px;
+    
+}
+
+.middle__text{
+font-size: 20px;
+    
+}
+ .cards__container{
+    grid-template-columns: 1fr;
+}
+.certificado{
+ margin-top:20px;
+
+    
+}
+.nav__links li{
+  opacity: 0;   
+}
+@keyframes  navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .modal-content{
+        max-width: 550px;
+    }   
+    .closeImg{
+    right: 200px;
+}
